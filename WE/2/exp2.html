@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        input{
+            width: 215px;
+            color: darkgray;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend style="font-family: fantasy;">Personal Details</legend>
+            <p>Name</p><input type="text">
+            <p>Roll number</p><input type="number">
+            <p>Branch</p><input type="text">
+            <p>DOB</p><input type="date" required="true">
+            <p>Qualification</p>
+            <select>
+                <option>10+2 or equivalent</option>
+                <option>Graduate in non Medical Science</option>
+                <option>Graduate in Medical Science</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend style="font-family: monospace; font-size: 11.5px;">Contact Details</legend>
+            <p>Email</p><input type="email">
+            <p>Mobile Number</p><input type="number">
+            <p>Address</p><input type="text">
+            <p>Upload Resume</p><input type="file"></p>
+        </fieldset>
+        <p>
+            <button type="submit" style="margin-left:300px;">Submit</button>
+        </p>    
+    </form>
+</body>
+</html>
