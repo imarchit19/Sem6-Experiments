@@ -10,15 +10,32 @@
             color: darkgray;
         }
     </style>
-
 </head>
+<script>
+    function validation()                                    
+    { 
+        var name = document.querySelector(".name").value;               
+        var roll = document.querySelector(".rollno").value;    
+        var branch = document.querySelector(".branch").value;
+        var phone = document.querySelector(".mobile").value.length;
+
+        if (name == "" || roll == "" || branch == "")                                   
+        { 
+            alert("Please recheck the field.");  
+        } 
+        if (phone <= 9)                                   
+        { 
+            alert("Please recheck the mobile field.");  
+        } 
+    }
+</script>
 <body>
-    <form action="#">
+    <form action="#" onsubmit="return validation()" method="post">
         <fieldset>
             <legend style="font-family: fantasy;">Personal Details</legend>
-            <p>Name</p><input type="text">
-            <p>Roll number</p><input type="number">
-            <p>Branch</p><input type="text">
+            <p>Name</p><input type="text" class="name">
+            <p>Roll number</p><input type="number" class="rollno">
+            <p>Branch</p><input type="text" class="branch">
             <p>DOB</p><input type="date" required="true">
             <p>Qualification</p>
             <select>
@@ -30,7 +47,7 @@
         <fieldset>
             <legend style="font-family: monospace; font-size: 11.5px;">Contact Details</legend>
             <p>Email</p><input type="email">
-            <p>Mobile Number</p><input type="number">
+            <p>Mobile Number</p><input type="number" class="mobile">
             <p>Address</p><input type="text">
             <p>Upload Resume</p><input type="file"></p>
         </fieldset>
